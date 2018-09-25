@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body ng-controller="mainCtrl">
+
+<div class="wrapper">
+	<div class="header">
+		<div class="image">
+		<img class="profile_pic" src="assets/images/profile_pic.jpg" alt="">
+		</div>
+		<h1>{{info.name}}</h1>
+		<span class="nickname">{{info.nickname}}</span>
+	</div>
+
+	<main>
+		<h2>Description</h2>
+		<span  ng-text-truncate="info.description" ng-tt-chars-threshold="134" class="desc">{{info.description}}</span>
+
+		<h2>Top Audience demographics</h2>
+		<span class="desc">{{info.demographics.country}} ,</span>
+		<span class="desc">{{info.demographics.gender}} ,</span>
+		<span class="desc">{{info.demographics.age-range}}</span>
+		<h2>Platform breakdown</h2>
+
+	<div class="social-container">
+
+	<div ng-if="sInfo.platforms.facebook">
+		<div class="facebook-container">
+			<img class="social-account" src="assets/images/facebook.svg" alt="">
+			<h2 id="audience_size">{{sInfo.platforms.facebook.audience_size | thousandSuffix}}</h2>
+			<h2>ENG. rate Photo</h2>
+			<span>{{sInfo.platforms.facebook.eng_rate_photo | percentage:0}}</span>
+
+			<h2>ENG. rate Video</h2>
+			<span>{{sInfo.platforms.facebook.eng_rate_video | percentage:0}}</span>
+
+			<h2>Viewership rate</h2>
+			<span>{{sInfo.platforms.facebook.eng_rate_photo | percentage:0}}</span>
+
+			<h2 class="score">Iscore</h2>
+			<span>{{sInfo.platforms.facebook.eng_rate_photo}}</span>
+		</div>
+	</div>
+
+	<div ng-if="sInfo.platforms.instagram">
+		<div class="instagram-container">
+			<img class="social-account" src="assets/images/instagram.svg" alt="">
+			<h2 id="audience_size">{{sInfo.platforms.instagram.audience_size | thousandSuffix}}</h2>
+
+			<h2>ENG. rate Photo</h2>
+			<span>{{sInfo.platforms.instagram.eng_rate_photo | percentage:0}}</span>
+
+			<h2>ENG. rate Video</h2>
+			<span>{{sInfo.platforms.instagram.eng_rate_video | percentage:0}}</span>
+
+			<h2>Viewership rate</h2>
+			<span>{{sInfo.platforms.instagram.eng_rate_photo | percentage:0}}</span>
+
+			<h2 class="score">Iscore</h2>
+			<span>{{sInfo.platforms.instagram.eng_rate_photo}}</span>
+		</div>
+	</div>
+
+	<div ng-if="sInfo.platforms.youtube">
+		<div class="youtube-container">
+			<img class="social-account" src="assets/images/youtube.svg" alt="">
+			<h2 id="audience_size">{{sInfo.platforms.youtube.audience_size | thousandSuffix}}</h2>
+			<h2>ENG. rate Photo</h2>
+			<span>{{sInfo.platforms.youtube.eng_rate_photo | percentage:0}}</span>
+
+			<h2>ENG. rate Video</h2>
+			<span>{{sInfo.platforms.youtube.eng_rate_video | percentage:0}}</span>
+
+			<h2>Viewership rate</h2>
+			<span>{{sInfo.platforms.youtube.eng_rate_photo | percentage:0}}</span>
+
+			<h2 class="score">Iscore</h2>
+			<span>{{sInfo.platforms.youtube.eng_rate_photo}}</span>
+		</div>
+	</div>
+
+
+	</div>
+
+	</main>
+
+</div>
+
+<script src="js/angular.js"></script>
+<script src="js/ng-text-trancate.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
