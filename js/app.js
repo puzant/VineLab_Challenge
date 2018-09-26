@@ -5,6 +5,7 @@ app.controller("mainCtrl", ['$scope', 'Info','socailInfo', function($scope, Info
 
     Info.getInfo().then(function(info) {
         $scope.info = info;
+        console.log(info);
     })
     socailInfo.getSocailInfo().then(function(sInfo) {
         $scope.sInfo = sInfo;
