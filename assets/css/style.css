@@ -113,3 +113,8 @@ span.btn-link {
 span.btn-link:hover {
     cursor: pointer;
 }
+
+.text-score {
+    color: #58b1d4;
+    font-size:1.3rem;
+}

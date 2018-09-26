@@ -39,10 +39,13 @@
 			<span>{{sInfo.platforms.facebook.eng_rate_video | percentage:0}}</span>
 
 			<h2>Viewership rate</h2>
-			<span>{{sInfo.platforms.facebook.eng_rate_photo | percentage:0}}</span>
+			<span>{{sInfo.platforms.facebook.viewership_rate | percentage:0}}</span>
 
 			<h2 class="score">Iscore</h2>
-			<span>{{sInfo.platforms.facebook.eng_rate_photo}}</span>
+			<span>{{sInfo.platforms.facebook.iscore | number: 1}}</span>
+			<div ng-if="sInfo.platforms.facebook.iscore < 7">
+					<p class="text-score">Moderate</p>
+				</div>
 		</div>
 	</div>
 
@@ -58,10 +61,13 @@
 			<span>{{sInfo.platforms.instagram.eng_rate_video | percentage:0}}</span>
 
 			<h2>Viewership rate</h2>
-			<span>{{sInfo.platforms.instagram.eng_rate_photo | percentage:0}}</span>
+			<span>{{sInfo.platforms.instagram.viewership_rate | percentage:0}}</span>
 
 			<h2 class="score">Iscore</h2>
-			<span>{{sInfo.platforms.instagram.eng_rate_photo}}</span>
+			<span>{{sInfo.platforms.instagram.iscore | number: 1}}</span>
+				<div ng-if="sInfo.platforms.instagram.iscore < 10">
+					<p class="text-score">Good</p>
+				</div>
 		</div>
 	</div>
 
@@ -76,10 +82,13 @@
 			<span>{{sInfo.platforms.youtube.eng_rate_video | percentage:0}}</span>
 
 			<h2>Viewership rate</h2>
-			<span>{{sInfo.platforms.youtube.eng_rate_photo | percentage:0}}</span>
+			<span>{{sInfo.platforms.youtube.viewership_rate | percentage:0}}</span>
 
 			<h2 class="score">Iscore</h2>
-			<span>{{sInfo.platforms.youtube.eng_rate_photo}}</span>
+			<span>{{sInfo.platforms.youtube.iscore | number: 1}}</span>
+				<div ng-if="sInfo.platforms.youtube.iscore < 5">
+					<p class="text-score">low</p>
+				</div>
 		</div>
 	</div>
 
