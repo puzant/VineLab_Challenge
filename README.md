@@ -1,7 +1,7 @@
 # VineLab_Challenge
 Front-End Technical challenge
 
-##Technologies used:
+## Technologies used:
 
 AngularJs for making http calls and rendering the data
 MVC pattern was used to ensure modularity and code reusibility
